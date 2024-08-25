@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    background: rgb(0,14,7);
+    background: linear-gradient(0deg, rgba(0,14,7,1) 0%, rgba(23,92,54,1) 99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 30px #744807 solid;
+    border-radius: 2%;
+}
+
+#containerInner {
+    height: 700px;
+    width: 700px;
+    background-color: white;
+}
