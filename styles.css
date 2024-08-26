@@ -24,6 +24,7 @@ body {
     }
     #containerInner {
         aspect-ratio: 2 / 1;
+        flex-wrap: wrap;
     }
 }
 
@@ -35,6 +36,7 @@ body {
     }
     #containerInner {
         aspect-ratio: 1 / 2;
+        flex-flow: column wrap;
     }
 }
 
@@ -43,16 +45,16 @@ body {
     display: flex;
     justify-content:flex-start; 
     align-items:flex-start;
-    flex-wrap: wrap;
 }
 
 .divs {
-    width: calc(3.125%);
+    flex-basis: 3.125%;
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     border: 1px black solid;
     background: white;
     margin: 0px;
     padding: 0px;
+    margin-bottom: 0;
     flex-shrink: auto;
 }

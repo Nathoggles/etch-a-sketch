@@ -12,4 +12,7 @@ function populateDivs(divs) {
     }
 }
 
-populateDivs(256);
+populateDivs(513);
+
+
+//add repopulation if resize?
