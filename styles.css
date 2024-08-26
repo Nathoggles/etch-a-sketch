@@ -18,12 +18,22 @@ body {
 }
 
 #containerInner {
-    height: 700px;
-    width: 1400px;
+    flex-basis: 140vh;
+    aspect-ratio: 1 / 1;
     background-color: white;   
+    display: flex;
+    justify-content:flex-start; 
+    align-items:flex-start;
+    flex-wrap: wrap;
 }
 
-#etchBoard {
-   
-    
+.divs {
+    width: calc(3.125%);
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    border: 1px black solid;
+    background: white;
+    margin: 0px;
+    padding: 0px;
+    flex-shrink: auto;
 }
