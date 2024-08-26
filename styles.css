@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif; 
     height: 100vh;
+    width: 100%;
     margin: 0px;
     display: flex;
     background: rgb(0,14,7);
@@ -11,15 +12,33 @@ body {
 }
 
 #containerOuter {
-    padding: 30px;
     background: rgb(116,72,7);
     background: radial-gradient(circle, rgba(116,72,7,1) 20%, rgba(49,30,1,1) 77%);
     border-radius: 2%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+@media (orientation:landscape) {
+    #containerOuter {
+        flex-basis: 65%;
+        padding: 3.7vh;
+    }
+    #containerInner {
+        aspect-ratio: 2 / 1;
+    }
+}
+
+@media (orientation:portrait) {
+   
+    #containerOuter {
+        flex-basis: 60%;
+        padding: 2vh;
+    }
+    #containerInner {
+        aspect-ratio: 1 / 2;
+    }
 }
 
 #containerInner {
-    flex-basis: 140vh;
-    aspect-ratio: 1 / 1;
     background-color: white;   
     display: flex;
     justify-content:flex-start; 
