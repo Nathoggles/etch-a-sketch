@@ -11,6 +11,10 @@ body {
     align-items: center;
 }
 
+
+#allContainer {
+    display: flex;
+}
 #containerOuter {
     background: rgb(116,72,7);
     background: radial-gradient(circle, rgba(116,72,7,1) 20%, rgba(49,30,1,1) 77%);
@@ -18,6 +22,11 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 @media (orientation:landscape) {
+
+    #allContainer {
+        flex-flow: row wrap;
+    }
+
     #containerOuter {
         flex-basis: 65%;
         padding: 3.7vh;
@@ -30,6 +39,10 @@ body {
 
 @media (orientation:portrait) {
    
+    #allContainer {
+        flex-flow: column wrap;
+    }
+
     #containerOuter {
         flex-basis: 60%;
         padding: 2vh;

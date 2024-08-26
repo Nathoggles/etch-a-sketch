@@ -23,11 +23,13 @@ function removeAllChildNodes(parent) {
 populateDivs(16);
 
 const divs = document.querySelectorAll(".divs");
+let divsColor = "black";
 
 divs.forEach((div) => { 
-    div.addEventListener("pointerover", (event) => { event.target.style.background = "black";
+    div.addEventListener("pointerover", (event) => { event.target.style.background = divsColor;
     })
 });
+
 
 
 
