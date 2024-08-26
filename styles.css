@@ -4,22 +4,26 @@ body {
     margin: 0px;
     display: flex;
     background: rgb(0,14,7);
-    background: linear-gradient(0deg, rgba(0,14,7,1) 0%, rgba(23,92,54,1) 99%);
+    background: linear-gradient(0deg, rgba(0,14,7,1) 0%, rgb(19, 73, 43) 99%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #containerOuter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 30px #744807 solid;
+    padding: 30px;
+    background: rgb(116,72,7);
+    background: radial-gradient(circle, rgba(116,72,7,1) 20%, rgba(49,30,1,1) 77%);
     border-radius: 2%;
 }
 
 #containerInner {
     height: 700px;
-    width: 700px;
-    background-color: white;
+    width: 1400px;
+    background-color: white;   
+}
+
+#etchBoard {
+   
+    
 }
