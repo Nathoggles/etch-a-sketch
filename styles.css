@@ -14,6 +14,8 @@ body {
 
 #allContainer {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #containerOuter {
     background: rgb(116,72,7);
@@ -25,10 +27,11 @@ body {
 
     #allContainer {
         flex-flow: row wrap;
+        flex-basis: 100%;
     }
 
     #containerOuter {
-        flex-basis: 65%;
+        flex-basis: 70%;
         padding: 3.7vh;
     }
     #containerInner {
@@ -40,17 +43,47 @@ body {
 @media (orientation:portrait) {
    
     #allContainer {
-        flex-flow: column wrap;
+        flex-flow: row wrap;
+        flex-basis: 100%;
+        border: 5px red solid;
     }
 
     #containerOuter {
-        flex-basis: 60%;
+        flex-basis: 80%;
         padding: 2vh;
+        border: 5px red solid;
     }
     #containerInner {
         aspect-ratio: 1 / 2;
         flex-flow: column wrap;
     }
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2vh;
+
+}
+
+button {
+    height: 10vh;
+    width: 10vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #containerInner {
