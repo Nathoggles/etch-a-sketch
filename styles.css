@@ -28,6 +28,7 @@ body {
     #allContainer {
         flex-flow: row wrap;
         flex-basis: 100%;
+        gap: 1%;
     }
 
     #containerOuter {
@@ -38,6 +39,16 @@ body {
         aspect-ratio: 2 / 1;
         flex-wrap: wrap;
     }
+
+    #buttonContainer {
+        flex-direction: column;
+        gap: 3vh;
+        padding: 2vh;
+    }
+    button {
+        height: 10vh;
+        width: 10vh;
+    }
 }
 
 @media (orientation:portrait) {
@@ -45,31 +56,36 @@ body {
     #allContainer {
         flex-flow: row wrap;
         flex-basis: 100%;
-        border: 5px red solid;
     }
 
     #containerOuter {
         flex-basis: 80%;
         padding: 2vh;
-        border: 5px red solid;
     }
     #containerInner {
         aspect-ratio: 1 / 2;
         flex-flow: column wrap;
     }
+    #buttonContainer {
+        
+        flex-direction: row;
+        gap: 2vh;
+        padding: 2vh;
+        box-sizing: border-box;
+    }
+    button {
+        height: 7vh;
+        width: 7vh;
+    }
 }
 
 #buttonContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 2vh;
 
 }
 
 button {
-    height: 10vh;
-    width: 10vh;
+    
     cursor: pointer;
     flex-shrink: 0;
     margin: 0;
