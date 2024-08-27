@@ -24,6 +24,14 @@ body {
     background: radial-gradient(circle, rgba(116,72,7,1) 20%, rgba(49,30,1,1) 77%);
     border-radius: 2%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-right: 0;
+}
+
+#containerInner {
+    background-color: white;   
+    display: flex;
+    justify-content:flex-start; 
+    align-items:flex-start;
 }
 @media (orientation:landscape) {
 
@@ -104,12 +112,7 @@ button:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#containerInner {
-    background-color: white;   
-    display: flex;
-    justify-content:flex-start; 
-    align-items:flex-start;
-}
+
 
 .divs {
     aspect-ratio: 1 / 1;
@@ -122,3 +125,41 @@ button:hover {
     flex-shrink: auto;
 }
 
+input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+width: 300px;
+cursor: pointer;
+outline: none;
+
+
+height: 2vh;
+background: rgb(122, 94, 50);
+border-radius: 1vh;
+
+margin: 0;
+padding: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    apperance: none;
+    height: 3vh;
+    width: 3vh;
+    background: rgba(49,30,1,1);
+    border: 0.3vh solid rgb(87, 58, 15);
+    /*border-radius: 50%;*/
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 3vh;
+    width: 3vh;
+    background: rgba(49,30,1,1);
+    border: 0.15vh solid rgb(87, 58, 15);
+}
+
+.range {
+    transform: rotate(-90deg);
+    margin: 0;
+    padding: 0;
+}
