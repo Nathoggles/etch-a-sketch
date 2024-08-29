@@ -41,6 +41,7 @@ sliderEl.addEventListener("input", (event) => {
     
     const tempSliderValue = event.target.value;
     sliderValue.textContent = tempSliderValue;
+    populateDivs(tempSliderValue);
 
     const progress = (tempSliderValue / sliderEl.max) * 100;
     sliderEl.style.background = `linear-gradient(to right, rgb(54, 31, 11) ${progress}%, rgb(122, 85, 50) ${progress}%)`; 
@@ -48,6 +49,18 @@ sliderEl.addEventListener("input", (event) => {
 });
 
 
+function randomNumber() {
+    const minCeiled = Math.ceil(1);
+    const maxFloored = Math.floor(256);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+  }
+let randomRgb; 
+function randomizeRGB(){
+ let randomRgb = "rgb(" + randomNumber() + ",&nbsp" + randomNumber() + ",&nbsp" + randomNumber() + ")";
+ randomRgb.toString;
+ console.log(randomRgb);
+}
+randomizeRGB();
 
 
 
