@@ -2,11 +2,14 @@ const containerInner = document.querySelector("#containerInner");
 const black = document.querySelector ("#black");
 const rgb = document.querySelector ("#rgb");
 const white = document.querySelector ("#white");
+const buttons = document.querySelectorAll(".buttons");
 
 
-let randomRgb; 
 let divsColor = "black";
+let rgbToggle;
 
+
+//fix scaling div coloring not working
 
 function populateDivs(crossANumber) {
     removeAllChildNodes(containerInner);
@@ -29,7 +32,7 @@ const divs = document.querySelectorAll(".divs");
 
 
 
-black.addEventListener("click", () => {
+/*black.addEventListener("click", () => {
     divsColor = "black";
     console.log(divsColor);
 });
@@ -39,13 +42,47 @@ rgb.addEventListener("click", () => {
 });
 white.addEventListener("click", () => {
     divsColor = "white";
+});*/
+
+/*buttons.addEventListener("click", (event) => {
+    console.log(event.target);
+});*/
+
+
+
+buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        if (event.target.id === "black" || event.target.id === "white") {
+            divsColor = event.target.id;
+            rgbToggle = false;
+        } else if (event.target.id===reset){
+            populateDivs(16);
+            sliderValue.textContent = 16;
+            rgbToggle = false;
+        }
+        else if (event.target.id === "toggleBorder") { //recheck tmrw
+            divs.forEach((div) => {
+            div.style.border = "0";
+            console.log(div.style.border);
+            rgbToggle = false;
+        });
+        } else if (event.target.id === "rgb") {
+            rgbToggle = true; 
+        }
+    });
 });
 
 
+
+
 divs.forEach((div) => { 
-    div.addEventListener("pointerover", (event) => {event.target.style.background = divsColor;  
-        console.log(event.target);
-    })
+    div.addEventListener("pointerover", (event) => {
+        if (rgbToggle === true) {
+            event.target.style.background = randomRgb();
+            console.log(randomRgb);
+        } else {
+         event.target.style.background = divsColor;
+    }});
 });
 
 
@@ -57,14 +94,14 @@ function randomNumber() {
   }
 
 
-function randomizeRGB(){
+let randomRgb = function randomizeRGB(){
     let randomRgb = "rgb(" + randomNumber() + ", " + randomNumber() + ", " + randomNumber() + ")";
     return randomRgb;
     }
 
 
 
-
+//range slider code
 const sliderEl = document.querySelector("#myRange");
 const sliderValue = document.querySelector(".value");
 
