@@ -64,16 +64,16 @@ buttons.forEach((button) => {
         } else if (event.target.id === "reset"){
             location.reload();
         }
-        else if (event.target.id === "toggleBorder" && isBordered == true) {
+        else if (event.target.id === "toggleBorder" && isBordered == false) {
             const divs = document.querySelectorAll(".divs");
             rgbToggle = false;
-            isBordered = false;
+            isBordered = true;
             divs.forEach((div) => {
                 div.style.border = "1px black solid";
                 });   
-        } else if (event.target.id === "toggleBorder" && isBordered == false) {
+        } else if (event.target.id === "toggleBorder" && isBordered == true) {
             rgbToggle = false;
-            isBordered = true;
+            isBordered = false;
             const divs = document.querySelectorAll(".divs");
             divs.forEach((div) => {
                 div.style.border = "0";
