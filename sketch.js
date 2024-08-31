@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll(".buttons");
 
 let divsColor = "black";
 let rgbToggle;
-let isBordered;
+let isBordered = true;
 
 
 
@@ -66,21 +66,20 @@ buttons.forEach((button) => {
             sliderValue.textContent = 16;
             rgbToggle = false;
         }
-        else if (event.target.id === "toggleBorder") { //recheck tmrw
-            if (isBordered) {
-            divs.forEach((div) => {
-            div.style.border = "0";
+        else if (event.target.id === "toggleBorder" && isBordered == true) {
+            const divs = document.querySelectorAll(".divs");
             rgbToggle = false;
             isBordered = false;
+            divs.forEach((div) => {
+                div.style.border = "1px black solid";
+                });   
+        } else if (event.target.id === "toggleBorder" && isBordered == false) {
+            rgbToggle = false;
+            isBordered = true;
+            const divs = document.querySelectorAll(".divs");
+            divs.forEach((div) => {
+                div.style.border = "0";
             });
-        }
-            if (isBordered = false) {
-                divs.forEach((div) => {
-                    div.style.border = "1px";
-                    rgbToggle = false;
-                    isBordered = true;
-                    });
-            }
         } else if (event.target.id === "rgb") {
             rgbToggle = true; 
         }
