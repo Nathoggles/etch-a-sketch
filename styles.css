@@ -128,9 +128,37 @@ button {
     align-items: center;
 }
 
+.colorbuttons{
+    flex-basis: 75%; 
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+#rgb {
+   background: linear-gradient(to left bottom,  
+   rgba(0, 0, 0, 0.8), 
+   rgba(255, 0, 0, 0.8), 
+   rgba(255, 166, 0, 0.8),
+   rgba(255, 255, 0, 0.8),
+   rgba(0, 128, 0, 0.8),
+   rgba(0, 0, 255, 0.8),
+   indigo,violet);
+}
+
 #toggleBorder {
     color: rgb(78, 45, 17);
     font-size: 200%;
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+#reset {
+    background-color: rgba(255, 255, 255, 0.877);
 }
 
 .divs {
