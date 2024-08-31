@@ -9,11 +9,6 @@ let divsColor = "black";
 let rgbToggle;
 let isBordered = true;
 
-
-
-
-//fix scaling div coloring not working
-
 function populateDivs(crossANumber) {
     removeAllChildNodes(containerInner);
     for (let i = 1; i < crossANumber ** 2 * 2 + 1; i++) {
@@ -34,26 +29,6 @@ function removeAllChildNodes(parent) {
 };  
 
 populateDivs(16);
-
-
-
-
-/*black.addEventListener("click", () => {
-    divsColor = "black";
-    console.log(divsColor);
-});
-rgb.addEventListener("click", () => {
-    divsColor = randomizeRGB();
-    console.log (divsColor);
-});
-white.addEventListener("click", () => {
-    divsColor = "white";
-});*/
-
-/*buttons.addEventListener("click", (event) => {
-    console.log(event.target);
-});*/
-
 
 
 buttons.forEach((button) => {
@@ -83,8 +58,6 @@ buttons.forEach((button) => {
         }
     });
 });
-
-
 
 function listener() {
    
@@ -142,7 +115,3 @@ const sliderValue = document.querySelector(".value");
         const progress = (tempSliderValue / sliderEl.max) * 100;
         sliderEl.style.background = `linear-gradient(to right, rgb(54, 31, 11) ${progress}%, rgb(122, 85, 50) ${progress}%)`; 
     }
-
-/*click.forEach((button) => {
-    button.addEventListener("click", () => {*/
-//why do you need +1? ask later
