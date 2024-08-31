@@ -99,24 +99,39 @@ body {
 }
 
 button {
-    
     cursor: pointer;
     flex-shrink: 0;
     margin: 0;
     padding: 0;
-    background-color: white; 
     display: flex;
     justify-content: center;  
     align-items: center;
-    border: 1px solid black;
     border-radius: 50%;
-}
-
-button:hover {
+    border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.cbuttons {
+    background-color: rgb(78, 45, 17);
+}
 
+
+.colorbuttons {
+    background-color: white; 
+    display: flex;
+    flex-basis: 80%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+#toggleBorder {
+    color: rgb(78, 45, 17);
+    font-size: 200%;
+}
 
 .divs {
     aspect-ratio: 1 / 1;
