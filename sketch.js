@@ -61,10 +61,8 @@ buttons.forEach((button) => {
         if (event.target.id === "black" || event.target.id === "white") {
             divsColor = event.target.id;
             rgbToggle = false;
-        } else if (event.target.id===reset){
-            populateDivs(16);
-            sliderValue.textContent = 16;
-            rgbToggle = false;
+        } else if (event.target.id === "reset"){
+            location.reload();
         }
         else if (event.target.id === "toggleBorder" && isBordered == true) {
             const divs = document.querySelectorAll(".divs");
@@ -136,6 +134,14 @@ const sliderValue = document.querySelector(".value");
     
     });
 
+    function resetSliderValue(sliderHardValue) {
+        const tempSliderValue = sliderHardValue;
+        sliderValue.textContent = tempSliderValue;
+        populateDivs(sliderHardValue);
+    
+        const progress = (tempSliderValue / sliderEl.max) * 100;
+        sliderEl.style.background = `linear-gradient(to right, rgb(54, 31, 11) ${progress}%, rgb(122, 85, 50) ${progress}%)`; 
+    }
 
 /*click.forEach((button) => {
     button.addEventListener("click", () => {*/
