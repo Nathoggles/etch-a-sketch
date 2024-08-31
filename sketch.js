@@ -7,6 +7,9 @@ const buttons = document.querySelectorAll(".buttons");
 
 let divsColor = "black";
 let rgbToggle;
+let isBordered;
+
+
 
 
 //fix scaling div coloring not working
@@ -18,7 +21,10 @@ function populateDivs(crossANumber) {
         div.setAttribute("class", "divs");
         div.style.flexBasis = `${100 / (crossANumber * 2)}%`;
         containerInner.appendChild(div);
+
+        
     }
+    listener();
 }
 
 function removeAllChildNodes(parent) {
@@ -28,7 +34,7 @@ function removeAllChildNodes(parent) {
 };  
 
 populateDivs(16);
-const divs = document.querySelectorAll(".divs");
+
 
 
 
@@ -61,11 +67,20 @@ buttons.forEach((button) => {
             rgbToggle = false;
         }
         else if (event.target.id === "toggleBorder") { //recheck tmrw
+            if (isBordered) {
             divs.forEach((div) => {
             div.style.border = "0";
-            console.log(div.style.border);
             rgbToggle = false;
-        });
+            isBordered = false;
+            });
+        }
+            if (isBordered = false) {
+                divs.forEach((div) => {
+                    div.style.border = "1px";
+                    rgbToggle = false;
+                    isBordered = true;
+                    });
+            }
         } else if (event.target.id === "rgb") {
             rgbToggle = true; 
         }
@@ -74,16 +89,21 @@ buttons.forEach((button) => {
 
 
 
+function listener() {
+   
+const divs = document.querySelectorAll(".divs");
+    divs.forEach((div) => { 
+        div.addEventListener("pointerover", (event) => {
+            if (rgbToggle === true) {
+                event.target.style.background = randomRgb();
+                console.log(randomRgb);
+            } else {
+             event.target.style.background = divsColor;
+        }});
+    });
+}
 
-divs.forEach((div) => { 
-    div.addEventListener("pointerover", (event) => {
-        if (rgbToggle === true) {
-            event.target.style.background = randomRgb();
-            console.log(randomRgb);
-        } else {
-         event.target.style.background = divsColor;
-    }});
-});
+
 
 
 
