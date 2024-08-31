@@ -12,4 +12,4 @@ I particularly aimed to make the webapp look nice on both PCs/tablets and mobile
 
 
 
-[Project brief] (https://www.theodinproject.com/lessons/foundations-etch-a-sketch#assignment/)
+[Project brief](https://www.theodinproject.com/lessons/foundations-etch-a-sketch#assignment/).
