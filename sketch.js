@@ -38,7 +38,7 @@ buttons.forEach((button) => {
             rgbToggle = false;
         } else if (event.target.id === "reset"){
             location.replace(location.href);
-            location.reload();
+            location.reload(true);
         }
         else if (event.target.id === "toggleBorder" && isBordered == false) {
             const divs = document.querySelectorAll(".divs");
