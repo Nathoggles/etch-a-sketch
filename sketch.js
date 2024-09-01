@@ -37,8 +37,7 @@ buttons.forEach((button) => {
             divsColor = event.target.id;
             rgbToggle = false;
         } else if (event.target.id === "reset"){
-            location.replace(location.href);
-            location.reload(true);
+            resetSliderValue(16);
         }
         else if (event.target.id === "toggleBorder" && isBordered == false) {
             const divs = document.querySelectorAll(".divs");
